@@ -1,16 +1,28 @@
 {
   "name": "s3-fns",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "This package contains helper functions to interact with AWS S3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "aws",
+    "s3",
+    "digital ocean",
+    "digital ocean spaces"
+  ],
+  "author": "Victor Ocnarescu <victor@chesscoders.com> (https://chesscoders.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 14"
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.637.0",
     "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.1",
+    "prettier": "^3.3.3"
   }
 }

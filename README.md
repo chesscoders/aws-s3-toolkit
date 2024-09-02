@@ -14,7 +14,7 @@ yarn add s3-fns
 
 ## Features
 
-- Download and upload helper functions for AWS S3 compatible storages
+- Download and upload helper functions for AWS S3 compatible buckets
 
 ## Usage
 
@@ -33,4 +33,4 @@ We welcome contributions to improve s3-fns. Please feel free to submit pull requ
 
 ## License
 
-s3-fns is licensed under the MIT License. See the LICENSE file for more details.
+The s3-fns package is licensed under the MIT License. See the LICENSE file for more details.
