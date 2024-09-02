@@ -1,11 +1,13 @@
 require('dotenv').config();
 const { PutObjectCommand } = require('@aws-sdk/client-s3');
 const s3Client = require('./s3-client');
+const endpointDetails = require('./endpoint-details');
 
 const upload = async (filename, data, acl = 'public-read') => {
+  const { bucket, folder } = endpointDetails();
   const params = {
-    Bucket: process.env.DO_SPACES_BUCKET,
-    Key: process.env.DO_SPACES_FOLDER ? `${process.env.DO_SPACES_FOLDER}/${filename}` : filename,
+    Bucket: bucket,
+    Key: folder ? `${folder}/${filename}` : filename,
     Body: data,
     ACL: acl,
   };
