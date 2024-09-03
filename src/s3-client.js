@@ -6,12 +6,12 @@ const { region } = endpointDetails();
 
 // Initialize S3 client
 const s3Client = new S3Client({
-  endpoint: process.env.DO_SPACES_ENDPOINT,
+  endpoint: process.env.AWS_S3_ENDPOINT,
   forcePathStyle: false,
   region,
   credentials: {
-    accessKeyId: process.env.DO_SPACES_KEY,
-    secretAccessKey: process.env.DO_SPACES_SECRET,
+    accessKeyId: process.env.AWS_S3_KEY,
+    secretAccessKey: process.env.AWS_S3_SECRET,
   },
 });
 

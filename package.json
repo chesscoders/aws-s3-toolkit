@@ -1,5 +1,5 @@
 {
-  "name": "s3-fns",
+  "name": "aws-s3-toolkit",
   "version": "0.1.0",
   "description": "This package contains helper functions to interact with AWS S3",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "keywords": [
     "aws",
-    "s3",
+    "aws s3",
     "digital ocean",
     "digital ocean spaces"
   ],

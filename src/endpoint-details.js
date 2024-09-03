@@ -10,7 +10,7 @@
 const endpointDetails = (endpoint) => {
   // Initialize endpoint with value from environment variable if not provided
   if (!endpoint) {
-    endpoint = process.env.DO_SPACES_ENDPOINT;
+    endpoint = process.env.AWS_S3_ENDPOINT;
   }
 
   try {
