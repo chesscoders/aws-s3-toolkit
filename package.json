@@ -4,7 +4,7 @@
   "description": "The AWS S3 toolkit package contains helper functions to interact with AWS S3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests"
   },
   "keywords": [
     "aws",
@@ -22,7 +22,10 @@
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
+    "chai": "^4.5.0",
     "eslint": "^9.9.1",
-    "prettier": "^3.3.3"
+    "mocha": "^10.7.3",
+    "prettier": "^3.3.3",
+    "sinon": "^18.0.0"
   }
 }

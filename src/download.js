@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { GetObjectCommand } = require('@aws-sdk/client-s3');
 const streamToBuffer = require('./stream-to-buffer');
 const s3Client = require('./s3-client');
