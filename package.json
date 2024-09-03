@@ -1,7 +1,7 @@
 {
   "name": "aws-s3-toolkit",
   "version": "0.1.0",
-  "description": "This package contains helper functions to interact with AWS S3",
+  "description": "The AWS S3 toolkit package contains helper functions to interact with AWS S3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
