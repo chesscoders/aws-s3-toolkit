@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { expect } = require('chai');
-const upload = require('../src/upload');
-const download = require('../src/download');
+const { upload, download, remove } = require('../index');
 
 describe('Upload function', () => {
   it('should be defined', () => {
@@ -24,5 +23,16 @@ describe('Download function', () => {
   it('should download a real file successfully', async () => {
     const response = await download('hello-world.txt');
     expect(response).to.be.an.instanceof(Buffer);
+  });
+});
+
+describe('Remove function', () => {
+  it('should be defined', () => {
+    expect(remove).to.be.a('function');
+  });
+
+  it('should remove a real file successfully', async () => {
+    const response = await remove('hello-world.txt');
+    expect(response.$metadata.httpStatusCode).to.equal(204);
   });
 });
