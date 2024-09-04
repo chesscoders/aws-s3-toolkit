@@ -1,6 +1,6 @@
 {
   "name": "aws-s3-toolkit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The AWS S3 toolkit package contains helper functions to interact with AWS S3",
   "main": "index.js",
   "scripts": {
