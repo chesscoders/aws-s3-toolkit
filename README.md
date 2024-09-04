@@ -1,4 +1,4 @@
-# aws-s3-toolkit
+# AWS S3 toolkit
 
 The AWS S3 toolkit package provides helper functions for AWS S3 operations.
 
@@ -12,24 +12,41 @@ npm i aws-s3-toolkit
 yarn add aws-s3-toolkit
 ```
 
+## Configuration
+
+Before using the AWS S3 toolkit package, set your environment variables based on the credentials provided by AWS.
+
+```sh
+AWS_S3_KEY="XXXXXXXXXXXXXXXXXXXX"
+AWS_S3_SECRET="XXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+AWS_S3_ENDPOINT="https://region-name.amazonaws.com/bucket-name"
+```
+
 ## Features
 
-- Download and upload helper functions for AWS S3 compatible buckets
+- Download, upload and remove helper functions for AWS S3 compatible buckets.
 
 ## Usage
 
 ```js
-import { download, upload } from 'aws-s3-toolkit';
+import { download, remove, upload } from 'aws-s3-toolkit';
 
-// Download
-await download(filename);
-// Upload
-await upload(filename, data);
+// Read file
+const fileName = 'hello-world.txt'
+const testFileData = fs.readFileSync(path.resolve(__dirname, fileName));
+
+// Upload to AWS S3 with public-read access
+// Use the `uploadPrivate` function for uploads with private access
+await upload(fileName, testFileData);
+// Download from AWS S3
+await download(fileName);
+// Remove from AWS S3
+await remove(fileName);
 ```
 
 ## Contributing
 
-We welcome contributions to improve AWS S3 toolkit package. Please feel free to submit pull requests or report issues via the [GitHub repository](https://github.com/chesscoders/aws-s3-toolkit).
+We welcome contributions to improve the AWS S3 toolkit package. Please feel free to submit pull requests or report issues via the [GitHub repository](https://github.com/chesscoders/aws-s3-toolkit).
 
 ## License
 
