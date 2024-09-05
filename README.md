@@ -19,7 +19,7 @@ Before using the AWS S3 toolkit package, set your environment variables based on
 ```sh
 AWS_S3_KEY="XXXXXXXXXXXXXXXXXXXX"
 AWS_S3_SECRET="XXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-AWS_S3_ENDPOINT="https://region-name.amazonaws.com/bucket-name"
+AWS_S3_URL="https://region-name.amazonaws.com/bucket-name"
 ```
 
 ## Features
