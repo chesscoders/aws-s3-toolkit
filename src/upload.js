@@ -1,6 +1,5 @@
 const { PutObjectCommand } = require('@aws-sdk/client-s3');
 const s3Client = require('./s3-client');
-const endpointDetails = require('./endpoint-details');
 
 /**
  * Uploads a file to an S3 bucket.
@@ -12,10 +11,9 @@ const endpointDetails = require('./endpoint-details');
  * @throws {Error} - Throws an error if the upload fails.
  */
 const upload = async (filename, data, acl = 'public-read') => {
-  const { bucket, folder } = endpointDetails();
   const params = {
-    Bucket: bucket,
-    Key: folder ? `${folder}/${filename}` : filename,
+    Bucket: process.env.AWS_S3_BUCKET,
+    Key: process.env.AWS_S3_FOLDER ? `${process.env.AWS_S3_FOLDER}/${filename}` : filename,
     Body: data,
     ACL: acl,
   };
